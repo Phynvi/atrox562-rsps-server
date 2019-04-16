@@ -781,7 +781,7 @@ public final class Player extends Entity {
 		}
 		getPackets().sendIComponentText(378,56, "You have not set a recovery question."); //have u set a recovery question?
 		getPackets().sendIComponentText(378,62, "You do not have a Bank PIN. Please visit a bank if you would like one."); //do u have a bank pin or not?
-		getPackets().sendIComponentText(378,113, "Welcome to Fractize");
+		getPackets().sendIComponentText(378,113, "Welcome to "+Settings.SERVER_NAME);
 		getPackets().sendIComponentText(679,4, ""+Settings.WeekTitle+"");//Message of the week title
 		getPackets().sendIComponentText(679,3, ""+Settings.WeekMessage+"");//Message of the week
 		started = true;
@@ -1018,7 +1018,7 @@ public final class Player extends Entity {
 		playerObjects = new ArrayList<WorldObject>();
 		getPackets().sendGameMessage("Welcome to "+Settings.SERVER_NAME+".");
 		getPackets().sendGameMessage("<col=db0000>"+ptime()+".");
-		getPackets().sendGameMessage("<col=db0000><img=4>Main clanchat: Fractize");
+		getPackets().sendGameMessage("<col=db0000><img=4>Main clanchat: "+Settings.SERVER_NAME+".");
 		LendingManager.process();
 		sendDefaultPlayersOptions();
 		farmingManager.init();
@@ -1518,7 +1518,7 @@ public final class Player extends Entity {
 		case 14632:
 			setNextAnimation(new Animation(1168));
 			setNextGraphics(new Graphics(247));
-			setNextPublicChatMessage(new PublicChatMessage("For Fractize!", 0));
+			setNextPublicChatMessage(new PublicChatMessage("For Camelot!", 0));
 			final boolean enhanced = weaponId == 14632;
 			skills.set(
 					Skills.DEFENCE,

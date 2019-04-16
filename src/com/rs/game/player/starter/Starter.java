@@ -1,5 +1,6 @@
 package com.rs.game.player.starter;
 
+import com.rs.Settings;
 import com.rs.game.player.Player;
 import com.rs.game.World;
 import com.rs.game.player.content.clans.Clan;
@@ -22,7 +23,7 @@ public class Starter {
 			return;
 		}
 		player.getInterfaceManager().sendInterface(771);
-		World.sendWorldMessage("<col=46A4FF>"+ player.getUsername() +" has joined Fractize for the first time!", false);
+		World.sendWorldMessage("<col=46A4FF>"+ player.getUsername() +" has joined "+ Settings.SERVER_NAME+" for the first time!", false);
 		player.getInventory().addItem(995, 20000); // cash
 		player.getInventory().addItem(330, 100); // 100 salmons
 		player.getInventory().addItem(590, 1); //tinderbox
