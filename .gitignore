@@ -14,6 +14,7 @@
 /.idea/*
 /.settings/*
 /bin/*
+/production/*
 /runfiles/*
 /updatelog/*
 /data/562cache/*
@@ -94,23 +95,6 @@ data/logs/droppeditems\.txt
 
 data/logs/logger\.txt
 information/
-
-data/dtRanks\.ser
-
-data/pkRanks\.ser
-
-data/saved_constants/
-
-data/saved_constants/
-
-data/dtRanks\.ser
-
-data/npcs/packedDrops\.d
-
-data/pkRanks\.ser
-
-
-out/production/atrox-rsps-server/META-INF/atrox-rsps-server\.kotlin_module
 
 dropseditor/unins000\.exe
 /bin/
