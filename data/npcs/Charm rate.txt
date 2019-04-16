@@ -1,0 +1,250 @@
+'Rum'-pumped crab - 1 2.5 1.5 2.5 4.5
+Aberrant spectre - 1 12 6 4 5
+Abyssal demon - 1 8.5 4 33.5 1
+Abyssal guardian - 1 3.5 12.5 2.5 0.8
+Abyssal leech - 1 0.7 1.2 0.4 0.4
+Abyssal walker - 1 5.5 17.5 3 0.6
+Acheron mammoth - 4 2.1 5.5 9.5 15.5
+Adamant dragon - 4 17.5 38.5 11.5 10.0
+Airut - 1 3 8.5 52.5 9.5
+Animated spade - 1 7.5 4.5 1.5 1.1
+Ankou - 1 23.5 2 2 0.5
+Aquanite - 1 10 5 5 6.5
+Armoured zombie - 1 7.5 4 3 3
+Automaton Generator - 1 5.5 2.5 2 9.0
+Automaton Guardian - 1 5.5 2.5 2.5 7.5
+Automaton Tracer - 1 6.0 3.0 2.5 8.5
+Baby black dragon - 1 9.5 22.0 11.0 2
+Bandit Brawler - 1 71.5 0.3 0.3 3.5
+Banshee - 1 2.5 7 1 0.3
+Barbarian - 1 4.5 1.3 0.3 0.3
+Basilisk - 1 7 19.5 5 1
+Bat - 1 16.0 1.5 0.5 0.7
+Black bear - 1 16.5 0.6 0.7 0.5
+Black demon - 1 21 11 44 2
+Black dragon - 3 8.5 26.5 7 1
+Black Guard - 1 5.0 9.5 2.0 11.0
+Black Knight Titan - 1 12.5 16.5 18.5 15.0
+Black Knight - 1 3.5 1 0.8 0.7
+Black unicorn - 1 5.0 9.5 0.6 0.3
+Blissful shadow - 1 13.5 13.5 19.5 23.0
+Bloodveld - 1 9 31 5 1
+Bloodworm - 1 4.5 13.0 2.5 0.8
+Blue dragon - 1 11 27.5 11 2
+Brine rat - 1 22.5 1.5 1.5 0.5
+Bronze dragon - 1 14.0 31.0 12.5 3.5
+Brutal green dragon - 2 15.5 8.0 4.5 1.6
+Cadarn magus - 1 23.0 37.5 22.0 8.5
+Cadarn ranger - 1 21.0 39.0 22.0 8.5
+Camel Warrior - 4 6.5 6.5 8.0 4.0
+Capsarius - 1 10.0 39.5 10.0 1.1
+Catablepon - 1 19.0 1.5 2.5 0.3
+Cave bug - 1 6.5 36.5 3.5 0.9
+Cave crawler - 1 9 2 0.9 0.5
+Cave goblin - 1 6.5 2.5 2.5 1.2
+Cave horror - 1 5 2 14 0.6
+Celestial dragon - 2 3 9.5 74.5 8.5
+Chaos dwarf hand cannoneer - 1 28.0 11.0 6.5 3.5
+Chaos dwarf - 1 9.5 4.5 2.5 2.5
+Chaos dwogre - 1 30.5 1.5 2 0.8
+Chaos Giant - 1 5.5 0.8 0.7 1.1
+Cockatrice - 1 2 7 1 0.3
+Cockroach drone - 1 1.5 1.0 4.0 0.4
+Cockroach soldier - 1 8 6 26.5 1
+Cockroach worker - 1 6.5 3.5 17.0 1.1
+Commander Zilyana - 1 17.0 19.5 23.5 10.0
+Corporeal Beast - 1 22.0 12.0 21.5 41.5
+Cow calf - 1 3.0 3.0 1.2 0.7
+Cow - 1 0.9 4 0.3 0.1
+Crawling Hand - 1 9.5 0.6 0.6 0.2
+Dark beast - 1 9 4.5 8 14 
+Dark warrior - 1 18.0 5.0 2 1.2
+Deadly red spider - 1 25.0 1.0 1.5 0.2
+Demon boss - 3 4.0 0.1 3.0 27.0
+Desert strykewyrm - 1 4 2 12 1.1
+Dire Wolf - 1 7.5 22.5 8.5 2.1
+Dried zombie - 1 6.5 4 3.5 5.5
+Dust devil - 1 12 6 26 0.9
+Dwarf - 1 4 2 3 0.6
+Earth warrior - 1 9 4.5 11 0.7
+Edimmu - 1 9.5 4.5 33.0 1.0
+Elf warrior - 1 7.5 24.0 6.5 1.5
+Elite Black Knight - 1 28.0 8.5 3.5 14.0
+Elite Dark Mage - 1 1.4 0.8 1.4 1.4
+Elite Dark Ranger - 1 5.0 4.5 2.5 1.1
+Elite Dark Warrior - 1 29.0 7.5 10.0 2.9
+Elite Khazard guard - 1 25.0 4.0 3.5 5.0
+Exiled kalphite guardian - 1 9 9 22.5 25.5
+Exiled kalphite marauder - 1 10.5 10.5 24.5 27.0
+Exiled Kalphite Queen - 9 9.5 8.0 13.0 12.5
+Fenris wolf - 1 34.0 3.0 1.8 0.5
+Feral vampyre - 1 4.5 2 3.5 0.4
+Fire elemental - 1 4.0 2.5 7.0 0.7
+Fire giant - 1 55.5 7 5 1.5
+Flesh Crawler - 1 4 6 0.8 0.3
+Frost dragon - 1 18.5 44.5 18 4
+Fungal mage - 1 5 12 2 1
+Fungal rodent - 1 6.5 3.5 1.7 1.1
+Ganodermic beast - 1 3.5 3 3 5.5
+Ganodermic runt - 1 6.5 3.0 76.5 1.1
+Gargoyle - 1 9.5 5 5 7
+Gelatinous abomination - 1 40.0 0.1 0.1 0
+General Graardor - 1 19.0 14.0 14.5 10.0
+Ghoul - 1 18.5 0.8 1 0.2
+Giant ant soldier - 1 5.0 11.5 2.1 1.1
+Giant bat - 1 19.5 0.5 1 0.3
+Giant crypt rat - 1 5.0 2.5 1.1 0.3
+Giant crypt spider - 1 6.0 2.8 1.2 2.3
+Giant Rock Crab - 3 79.5 9.5 6.5 2
+Giant spider - 1 8.5 0.9 2.5 0.7
+Glacor - 3 8.5 8.5 35.5 36.0
+Gladius - 1 2.5 6 75.5 5
+Gnoeals - 1 4.5 3.7 3.7 2.6
+Goblin - 1 9.5 0.3 0.9 0.2
+Greater demon - 1 7 4 26 0.9
+Greater reborn mage - 1 0 0 0 0
+Greater reborn ranger - 1 5.0 61.5 13.0 1.6
+Greater reborn warrior - 1 13.0 50.0 3.3 2.3
+Green dragon - 1 8.5 16.5 7.5 1.5
+Grifolapine - 1 4 2.5 11.5 1.0
+Grifolaroo - 1 4 2.5 11.5 0.8
+Grizzly bear cub - 1 10.5 2.0 2.5 1.2
+Grizzly bear - 1 10.5 1.5 2 0.3
+Grotworm - 1 3 1 3.5 0.6
+Guard Bandit - 1 14.5 8.1 8.1 8.1
+Guard - 1 7 0.8 0.5 0.2
+Harpie Bug Swarm - 1 2 6 0.5 0.2 
+Held Vyrewatch - 1 2.5 1.0 2.5 1.5
+Hellhound - 1 69 5 5 1
+Hill Giant - 1 14.5 0.9 1 0.2
+Hobgoblin - 1 16 0.5 1.0 0.2
+Ice giant - 1 45.0 4 4.5 0.7
+Ice spider - 1 27.5 7.5 5.0 2.0
+Ice strykewyrm - 1 5.5 3 2.5 9.5
+Ice troll female - 1 6.5 7.0 3.5 2.0
+Ice troll male - 1 22.5 34.0 10.0 4.0
+Ice warrior - 1 42.5 1.5 2.5 0.5
+Icefiend - 1 3 2 3.5 0.3
+Infernal Mage - 1 32.5 3 2.5 0.6
+Infested axe - 1 13.5 1.5 12.5 1.1
+Iorwerth guard - 1 20.5 40.0 19.5 8.5
+Iorwerth scout - 1 21.5 38.0 21.5 8.0
+Iron dragon - 2 12.5 32.5 13 3
+Ivory Bre'egth (cursed) - 1 14.0 4.5 9.0 10.0
+Ivory Gromblod (cursed) - 1 10.0 7.5 7.5 9.0
+Ivory Shredflesh (cursed) - 1 3 4.5 2 1.5
+Jelly - 1 7.5 22 3.5 0.9
+Jogre - 1 38.0 2.5 2.5 0.4
+Jungle horror - 1 3.5 12.5 2 0.5
+Jungle strykewyrm - 1 6 14.5 2.5 1
+K'ril Tsutsaroth - 1 12.5 3.5 10.5 18.5
+Kal'gerion demon - 3 22.5 10.5 21.0 35.0
+Kalphite Guardian - 1 13.5 6.5 7 8.5
+Kalphite King - 2 8.0 5.0 31.0 20.5
+Kalphite Queen - 6 3.0 3.5 6.0 8.5
+Kalphite Soldier - 1 8.5 5.5 7.5 6.5
+Kalphite Worker - 1 6 3 1.5 2
+Khazard trooper - 1 11.0 1.5 1.1 0.7
+Killerwatt - 1 13.5 1.1 0.8 0.2
+King Black Dragon - 4 4.0 4.5 61.0 1.5
+Knight of Saradomin - 1 27.0 1.6 1.6 7.5
+Kraka - 1 22.0 5.5 4.5 2.0
+Kree'arra - 1 25.0 13.5 15.5 7.5
+Kurask - 1 8.5 27 6.5 1
+Lava strykewyrm - 3 1.1 4.5 30.0 58.0
+Legio Primus - 6 9.5 7.0 12.0 9.5
+Legio Quartus - 6 10.0 10.0 32.0 16.5
+Legio Quintus - 6 21.5 16.5 25.0 20.0
+Legio Secundus - 6 17.5 20.5 34.0 27.5
+Legio Sextus - 6 0.4 0.4 18.0 20.0
+Legio Tertius - 6 6.0 1.3 2.0 2.0
+Lesser demon - 1 2 0.8 3 0.6
+Lesser reborn mage - 1 1.5 1.1 1.1 1.1
+Lesser reborn ranger - 1 13.0 7.0 5.5 3.0
+Lesser reborn warrior - 1 2.3 5.5 2.3 2.3
+Locust rider - 1 4.5 5.5 22.5 1.1
+Mammoth - 4 2.1 5.5 9.5 15.5
+Manifest shadow - 1 13.0 13.0 21.5 24.0
+Mature grotworm - 1 3 1.5 8.5 0.6
+Mighty banshee - 1 5.5 17 4.5 1
+Mithril dragon - 4 19.5 49.0 19.5 3.5
+Monk of Zamorak - 1 0.7 9.0 1.5 0.7
+Monkey - 1 0.1 0.1 0.1 0.1
+Moss giant - 1 32.5 3 2.5 0.6
+Mounted terrorbird gnome - 1 12.5 0.8 4.5 0.6
+Mutated bloodveld - 1 43.5 5.5 4 1
+Mutated jadinko baby - 1 6 14 2 1
+Mutated jadinko guard - 1 5.5 2.5 2 7.5
+Mutated jadinko male - 1 8 4.5 4 14
+Nechryael - 1 9 4.5 30.5 1.1
+Nex - 2 6.5 7.5 10.5 21.0
+Ogre - 1 13.5 2 1.5 0.4
+Ogress champion - 1 79.5 4 2.5 0.8
+Ogress warrior - 1 39.0 3.5 3.5 2.1
+Ogress - 1 39.0 4.0 4.5 0.7
+Ork legion - 1 62.5 25.5 10.0 0.1
+Pee Hat - 1 36.5 8.0 5.0 1.3
+Pig - 1 1.0 0.2 0.2 0.2
+Poison spider - 1 10.0 28.5 0.1 0.3
+Pyrefiend - 1 5 2.5 5.5 0.5
+Queen Black Dragon - 3 10.5 4.5 4.5 18.0
+Ragged Abomination - 3 16.0 45.0 15.0 9.0
+Ravenous ghoul - 1 71.5 5.0 6.0 1.2
+Red dragon - 1 18.0 42.5 17.0 3.5
+Ripper Demon - 4 10.0 11.0 38.5 25.5
+Rock Crab - 1 10 0.5 1 0.3
+Rock lobster - 2 16.0 9.0 24.0 3.5
+Rogue - 1 5.0 3.5 3.5 3
+Rorarius - 1 45.5 11.5 1 0.7
+Rune dragon - 4 12.5 21.0 28.0 5.0
+Scabaras ranger - 1 5.0 1.5 1.5 1.5
+Scorpion - 1 2.5 6.5 0.8 0.4
+Scutarius - 1 20.0 13.0 36.5 25.5
+Shadow Hound - 1 7.0 2.5 2.5 1.3
+Shadow warrior - 1 10.5 5.5 13 0.6
+Sickly Airut - 1 3 8.5 52.5 9.5
+Skeletal hand - 1 23.0 2.5 1.4 0.3
+Skeletal Wyvern - 2 6.5 3.5 54.5 1.5
+Skeleton - 1 5.5 0.9 2.5 1.0
+Skogre - 1 28.0 8.0 3.5 1.5
+Slasher Demon - 4 10.0 11.0 38.5 25.5
+Spider - 1 2.5 3.5 1.4 1.5
+Steel dragon - 3 14 35.5 14 3
+Super Cow - 1 0.9 4 0.3 0.1
+Suqah - 1 14 8 6 7.5
+Terror dog - 1 9.5 7.5 8.5 3
+Thug - 1 11.5 0.8 0.7 0.3
+Tormented demon - 3 14.0 9.0 15.5 37.0
+Tormented wraith - 1 12.5 5.0 13.0 22.0
+Troll brute - 1 10.0 0.1 0.1 0.1
+Troll chucker - 1 9.0 0.4 0.3 0.1
+Troll commando - 1 9.0 0.6 0.6 0.6
+Troll general - 1 39.5 5.0 3.5 2.5
+Troll mage commando - 1 9.0 3.5 2.8 1.4
+Troll ranger commando - 1 34.5 2 1.1 1.5
+Troll shaman - 1 12.0 0.3 0.4 0.1
+Truthful shadow - 1 14.0 13.0 19.5 23.5
+Turoth - 1 7.5 22 5.5 1
+Undead troll - 1 5.0 1.1 2.5 3.0
+Vampire - 1 4.5 2 3.5 0.4
+Vorago - 5 5.5 6.0 63.0 2.1
+Vyrelady - 1 2.0 0.7 2.5 2.0
+Vyrelord - 1 1.5 1.1 0.9 3.5
+Vyrewatch - 1 2.5 1.0 2.5 1.5
+Wall beast - 1 10.0 6.0 10.0 1.1
+Wallasalki - 1 15.5 7.5 8.5 11.5
+Warped tortoise - 1 9 4 3 3.5
+Warrior woman - 1 6.0 2.0 2.0 1.6
+Waterfiend - 1 9 5 79 2
+Werewolf - 1 44.5 4 4 1.1
+White wolf - 1 10.0 4.0 12.5 0.5
+Wild dog - 1 6.5 16.0 6.5 1.5
+Wizard - 1 12.5 6.0 4.0 0.3
+Wolf - 1 3.5 2.0 6.0 0.5
+Wyvern - 4 6.0 4.0 3.0 16.0
+Yeti - 1 22.5 12.0 7.5 7.5
+Young grotworm - 1 4.5 2 1.0 0.3
+Zamorak ranger - 1 1.4 2.5 4.5 13.5
+Zamorak warrior - 1 18.0 3.0 2.5 0.8
+Zogre - 1 11.0 1.5 1.5 0
+Zombie hand - 1 21.5 1.4 1.6 0.6

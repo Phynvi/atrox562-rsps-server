@@ -1,0 +1,10 @@
+//use: Object type rotation - x y plane boolean clip Removing Objects
+//EG: 42425 10 0 - 3220 3222 0 true
+//delete packedObjectSpawns folder in this directory after modifying this file.
+-1 10 0 - 3148 3477 0 false
+4483 10 0 - 2507 3863 0 false
+409 10 0 - 2507 3857 0 false
+-1 10 0 - 2500 3857 0 true
+-1 10 0 - 2500 3863 0 true
+//Grand Exchange
+409 10 0 - 3156 3486 0 false

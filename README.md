@@ -1,2 +1,2 @@
-# atrox-rsps-server
-This repo contains all server files for Atrox RSPS 562
+# atrox-rsps
+Source files of atrox 667 rsps

@@ -1,0 +1,1 @@
+actionsList.add(new PosCameraAction(ROTATE LEFT/RIGHT, 3510, HEIGHT?, DELAY));
