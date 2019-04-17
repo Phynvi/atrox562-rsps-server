@@ -67,6 +67,8 @@ data/iplogs/
 
 data/starters\.ini
 
+out/
+
 out/production/infernalrsps-server/com/rs/game/StarterMap\.txt
 
 out/production/infernalrsps-server/com/rs/game/npc/familiar/Z-FileSearcher\.jar
