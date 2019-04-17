@@ -2,7 +2,6 @@ package com.rs.game.player.skills.woodcutting;
 
 import com.rs.cache.loaders.ItemDefinitions;
 import com.rs.cache.loaders.ObjectDefinitions;
-import com.rs.game.cities.achievements.CityAchievements;
 import com.rs.game.Animation;
 import com.rs.game.Graphics;
 import com.rs.game.World;
@@ -419,11 +418,6 @@ public final class Woodcutting extends Action {
 			return -1;
 		}
 		if (player.inArea(3079, 3225, 3093, 3239)) {
-			if (definitions == TreeDefinitions.WILLOW_TREE) {
-				if (!player.getAchievementDiaryManager().getDiary(CityAchievements.LUMBRIDGE).isComplete(1, 5)) {
-					player.getAchievementDiaryManager().getDiary(CityAchievements.LUMBRIDGE).updateTask(player, 1, 5, true);
-				}
-			}
 		}
 		if (!player.getInventory().hasFreeSlots()) {
 			player.setNextAnimation(new Animation(-1));

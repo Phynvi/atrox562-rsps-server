@@ -7,7 +7,6 @@ import com.rs.game.item.Item;
 import com.rs.game.player.Player;
 import com.rs.game.Animation;
 import com.rs.game.player.actions.Action;
-import com.rs.game.cities.achievements.CityAchievements;
 import com.rs.utils.Utils;
 import com.rs.game.player.Skills;
 import com.rs.cache.loaders.ItemDefinitions;
@@ -231,13 +230,13 @@ public class LeatherCrafting extends Action {
 			player.getInventory().removeItems(THREAD);
 			player.sendMessage("You use up one of your reels of thread.");
 		}
-		if (player.inArea(3240, 3255, 3266, 3300)) {
+		/*if (player.inArea(3240, 3255, 3266, 3300)) {
 			if (data == LeatherData.COIF) {
 				if (!player.getAchievementDiaryManager().getDiary(CityAchievements.LUMBRIDGE).isComplete(1, 4)) {
 					player.getAchievementDiaryManager().getDiary(CityAchievements.LUMBRIDGE).updateTask(player, 1, 4, true);
 				}
 			}
-		}
+		}*/
 		if (quantity <= 0)
 			return -1;
 		player.setNextAnimation(CRAFT_ANIMATION);

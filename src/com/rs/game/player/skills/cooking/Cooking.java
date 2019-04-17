@@ -3,8 +3,6 @@ package com.rs.game.player.skills.cooking;
 import java.util.HashMap;
 import java.util.Map;
 
-import com.rs.game.cities.achievements.AchievementDiary;
-import com.rs.game.cities.achievements.CityAchievements;
 import com.rs.game.Animation;
 import com.rs.game.World;
 import com.rs.game.WorldObject;
@@ -358,14 +356,14 @@ public class Cooking extends Action {
             player.getPackets().sendGameMessage(
                     "You successfully cook the " + cook.getProduct().getDefinitions().getName().toLowerCase() + ".",
                     true);
-            if (player.inArea(3205, 3211, 3215, 3218)) {
+            /*if (player.inArea(3205, 3211, 3215, 3218)) {
                 if (cook == Cookables.BREAD) {
                     AchievementDiary diary = player.getAchievementDiaryManager().getDiary(CityAchievements.LUMBRIDGE);
                     if (!diary.isComplete(0, 7)) {
                         diary.updateTask(player, 0, 7, true);
                     }
                 }
-            }
+            }*/
         }
         if (amount > 0) {
             player.getPackets().sendGameMessage(

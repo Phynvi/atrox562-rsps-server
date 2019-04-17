@@ -10,7 +10,6 @@ import com.rs.game.player.Skills;
 import com.rs.game.player.skills.slayer.Slayer.SlayerMaster;
 import com.rs.game.player.skills.slayer.Slayer.SlayerTask;
 import com.rs.utils.Utils;
-import com.rs.game.cities.achievements.CityAchievements;
 
 public class SlayerManager implements Serializable {
 
@@ -235,11 +234,6 @@ public class SlayerManager implements Serializable {
 		if (initial) {
 			if (socialPlayer != null)
 				socialPlayer.getSlayerManager().setCurrentTask((SlayerTask) futureTask[0], (int) futureTask[1]);
-		}
-		if (currentMaster == SlayerMaster.CHAELDAR) {
-			if (!player.getAchievementDiaryManager().getDiary(CityAchievements.LUMBRIDGE).isComplete(1, 7)) {
-				player.getAchievementDiaryManager().getDiary(CityAchievements.LUMBRIDGE).updateTask(player, 1, 7, true);
-			}
 		}
 	}
 

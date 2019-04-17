@@ -11,8 +11,6 @@ import com.rs.game.WorldTile;
 import com.rs.game.npc.NPC;
 import com.rs.game.ForceTalk;
 import com.rs.game.ForceMovement;
-import com.rs.game.cities.achievements.CityAchievements;
-import com.rs.game.cities.achievements.AchievementDiary;
 import com.rs.game.minigames.PuroPuro;
 import com.rs.game.player.Skills;
 import com.rs.cores.CoresManager;
@@ -283,14 +281,14 @@ public class ButterflyNetting extends Action {
 
 					player.sendMessage("..and you successfully capture the "
 							+ entity.toString().toLowerCase().replaceAll("_", " ") + ".");
-					if (isAtPuroPuro(player)) {
+					/*if (isAtPuroPuro(player)) {
 						if (entity == Entities.ESSENCE_IMPLING || entity == Entities.ECLECTIC_IMPLING) {
 							AchievementDiary diary = player.getAchievementDiaryManager().getDiary(CityAchievements.LUMBRIDGE);
 							if (!diary.isComplete(1, 8)) {
 								diary.updateTask(player, 1, 8, true);
 							}
 						}
-					}
+					}*/
 					player.getInventory().deleteItem(new Item(isButterfly() ? 10012 : 11260, 1));
 					if (isAtPuroPuro(player) || isButterfly())
 						player.getInventory().addItem(new Item(entity.getJarId(), 1));

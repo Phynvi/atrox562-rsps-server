@@ -14,8 +14,6 @@ import com.rs.game.player.Skills;
 import com.rs.game.tasks.WorldTask;
 import com.rs.game.tasks.WorldTasksManager;
 import com.rs.net.decoders.handlers.InventoryOptionsHandler;
-import com.rs.game.cities.achievements.AchievementDiary;
-import com.rs.game.cities.achievements.CityAchievements;
 import com.rs.utils.Utils;
 
 public class Firemaking extends Action {
@@ -164,14 +162,14 @@ public class Firemaking extends Action {
 				World.spawnTempGroundObject(new WorldObject(fire.getFireId(), 10, 0, tile.getX(), tile.getY(), tile.getPlane()), 592, fire.getLife());
 				player.getSkills().addXp(Skills.FIREMAKING, increasedExperience(player, fire.getExperience()));
 				player.setNextFaceWorldTile(tile);
-				if (player.inArea(3192, 3195, 3260, 3253) || player.inArea(3066, 3222, 3146, 3312)) {
+				/*if (player.inArea(3192, 3195, 3260, 3253) || player.inArea(3066, 3222, 3146, 3312)) {
 					if (fire == Fire.OAK_LOGS) {
 						AchievementDiary diary = player.getAchievementDiaryManager().getDiary(CityAchievements.LUMBRIDGE);
 						if (!diary.isComplete(0, 4)) {
 							diary.updateTask(player, 0, 4, true);
 						}
 					}
-				}
+				}*/
 			}
 		}, 1);
 		player.getTemporaryAttributtes().put("Fire", Utils.currentTimeMillis() + 1800);

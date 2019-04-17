@@ -23,8 +23,6 @@ import com.rs.game.player.skills.hunter.Falconry;
 import com.rs.game.player.skills.hunter.HunterCore;
 import com.rs.game.player.actions.mining.LivingMineralMining;
 import com.rs.game.player.controlers.RuneEssenceController;
-import com.rs.game.cities.achievements.AchievementDiary;
-import com.rs.game.cities.achievements.CityAchievements;
 import com.rs.game.minigames.PuroPuro;
 import com.rs.game.player.skills.fishing.Fishing;
 import com.rs.game.player.skills.fishing.Fishing.FishingSpots;
@@ -466,10 +464,6 @@ public class NPCHandler {
 						player.getPackets().sendGameMessage("You need to have completed the Rune Mysteries Quest to use this feature.");
 						return;
 					}
-					AchievementDiary diary = player.getAchievementDiaryManager().getDiary(CityAchievements.LUMBRIDGE);
-                        if (!diary.isComplete(0, 1)) {
-                            diary.updateTask(player, 0, 1, true);
-                        }
                         RuneEssenceController.teleport(player, npc);
 					}
 					else

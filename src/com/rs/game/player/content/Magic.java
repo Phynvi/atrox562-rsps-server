@@ -28,8 +28,6 @@ import com.rs.game.tasks.WorldTasksManager;
 import com.rs.utils.Utils;
 import com.rs.game.player.CoordsEvent;
 import com.rs.game.player.actions.HomeTeleport;
-import com.rs.game.cities.achievements.AchievementDiary;
-import com.rs.game.cities.achievements.CityAchievements;
 
 /*
  * content package used for static stuff
@@ -1067,10 +1065,10 @@ public class Magic {
 					1);
 			break;
 		case 43: // lumby
-			AchievementDiary diary = player.getAchievementDiaryManager().getDiary(CityAchievements.LUMBRIDGE);
+			/*AchievementDiary diary = player.getAchievementDiaryManager().getDiary(CityAchievements.LUMBRIDGE);
 			if (!diary.isComplete(1, 2)) {
 				diary.updateTask(player, 1, 2, true);
-			}
+			}*/
 			sendNormalTeleportSpell(player, 31, 41, new WorldTile(3222, 3218, 0), EARTH_RUNE, 1, AIR_RUNE, 3, LAW_RUNE,
 					1);
 			break;

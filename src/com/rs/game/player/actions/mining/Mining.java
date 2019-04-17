@@ -4,8 +4,6 @@ import com.rs.cache.loaders.ItemDefinitions;
 import com.rs.game.Animation;
 import com.rs.game.World;
 import com.rs.game.WorldObject;
-import com.rs.game.cities.achievements.AchievementDiary;
-import com.rs.game.cities.achievements.CityAchievements;
 import com.rs.game.item.Item;
 import com.rs.game.WorldTile;
 import com.rs.game.player.Player;
@@ -321,12 +319,12 @@ public final class Mining extends MiningBase {
 					.toLowerCase();
 			player.getPackets().sendGameMessage("You mine some " + oreName + ".", true);
 			if (player.inArea(3283, 3271, 3321, 3325)) {
-				if (definitions == RockDefinitions.IRON) {
+				/*if (definitions == RockDefinitions.IRON) {
 					AchievementDiary diary = player.getAchievementDiaryManager().getDiary(CityAchievements.LUMBRIDGE);
 					if (!diary.isComplete(0, 8)) {
 						diary.updateTask(player, 0, 8, true);
 					}
-				}
+				}*/
 			}
 		}
 	}

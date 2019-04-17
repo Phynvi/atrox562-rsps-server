@@ -1,17 +1,15 @@
 package com.rs.game.player.dialogues;
 
-import com.rs.game.cities.achievements.AchievementDiary;
-import com.rs.game.cities.achievements.CityAchievements;
 import com.rs.game.player.dialogues.Dialogue;
 import com.rs.game.item.Item;
 import com.rs.game.World;
 
 /**
- * 
+ *
  * File -> ExplorerJackDialogue.java
  *
  * Package -> com.projectx.game.content.dialogues.impl.towns.lumbridge
- * 
+ *
  * Created for -> Project X Live
  *
  * @author Austin
@@ -21,7 +19,7 @@ public class ExplorerJackDialogue extends Dialogue {
 
 	private int npcId;
 
-	private AchievementDiary diary;
+	//private AchievementDiary diary;
 
 	@Override
 	public void start() {
@@ -31,9 +29,9 @@ public class ExplorerJackDialogue extends Dialogue {
 
 	@Override
 	public void run(int interfaceId, int componentId) {
-		if (diary == null) {
+		/*if (diary == null) {
 			diary = player.getAchievementDiaryManager().getDiary(CityAchievements.LUMBRIDGE);
-		}
+		}*/
 		switch (stage) {
 		case -1:
 			sendNPCDialogue(npcId, NORMAL, "distant memory.");
@@ -113,7 +111,7 @@ public class ExplorerJackDialogue extends Dialogue {
 			stage = 11;
 			break;
 		case 11:
-			if (!diary.isComplete()) {
+			/*if (!diary.isComplete()) {
 				sendNPCDialogue(npcId, NORMAL, "Sorry, you're not owed any Task rewards at the moment.", "Look at your Task System for things to do to earn more.");
 				stage = 1;
 			}
@@ -131,7 +129,7 @@ public class ExplorerJackDialogue extends Dialogue {
 						"I've seemed to have lost my explorer's ring..."
 						}, IS_PLAYER, player.getIndex(), 9847);
 				stage = 60;
-			}
+			}*/
 			break;
 		case 12:
 			sendNPCDialogue(npcId, NORMAL, "started, if not finished.");
@@ -141,7 +139,7 @@ public class ExplorerJackDialogue extends Dialogue {
 			sendNPCDialogue(npcId, NORMAL, "To claim the Lumbridge set reward, speak to Bob in Bob's", "Axes in Lumbridge, Ned in Draynor Village, or myself.");
 			stage = 1;
 			break;
-			
+
 		/**
 		 * TASK SYSTEM REWARDING
 		 */
@@ -157,12 +155,12 @@ public class ExplorerJackDialogue extends Dialogue {
 			stage = 52;
 			break;
 		case 52:
-			diary.setRewarded(0);
+			/*diary.setRewarded(0);
 			for (Item i : diary.getCityAchievements().getRewards(0)) {
 				player.getInventory().addItemDrop(i.getId(), 1, player);
 				World.sendWorldMessage("<col=ff6600><img=4>Diary Task: "+ player.getDisplayName() +" has been rewarded: "+ i.getDefinitions().getName() +",", false);
 				World.sendWorldMessage("<col=ff6600><img=4>by completing all <col=db0000>"+ diary.getCityAchievements().getName() +"</col> <col=ff6600>achievements.", false);
-			}
+			}*/
 			sendNPCDialogue(npcId, NORMAL, "This ring is a representation of the adventures you", "went on to complete your tasks.");
 			//World.sendWorldMessage("<col=ff6600><img=4>Diary Task: "+ player.getDisplayName() +" has been rewarded: "+ i.getId().getDefinitions().getName() +".", false);
 			stage = 53;
@@ -174,12 +172,12 @@ public class ExplorerJackDialogue extends Dialogue {
 						}, IS_PLAYER, player.getIndex(), 9847);
 			stage = 1;
 			break;
-			
+
 		/**
 		 * OBTAINING LOST EXPLORERS RING
 		 */
 		case 60:
-			player.getInventory().addItemDrop(diary.getCityAchievements().getRewards(0)[0].getId(), 1, player);
+			//player.getInventory().addItemDrop(diary.getCityAchievements().getRewards(0)[0].getId(), 1, player);
 			sendNPCDialogue(npcId, NORMAL, "You better be more careful this time.");
 			stage = 1;
 			break;
