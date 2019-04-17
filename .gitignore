@@ -11,26 +11,46 @@
 *.bak
 
 # Folders #
-/.idea/*
+/.idea/* 
+
 /.settings/*
+
 /bin/*
+
 /production/*
+
 /runfiles/*
+
 /updatelog/*
+
 /data/562cache/*
+
 /data/characters/*
+
 /data/charactersBackup/*
-/data/npcs/packedSpaws/*
+
+data/npcs/packedSpaws/*
+
 /data/npcs/npcswithoutbonus/*
+
 /data/censor/packedCensoredWords.e
+
 /data/logs\.txt
+
 /data/iplogs\.txt
+
 /data/maps/packedSpawns/*
+
 /data/maps/*
+
 /data/bannedIPS.ser
+
 /data/cache-backnups/*
+
 /data/clans/*
+
 /data/GE/grandexchange/*
+
 /data/starters/*
 
 # Packages #
