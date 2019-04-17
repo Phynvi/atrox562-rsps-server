@@ -14,7 +14,7 @@ public final class Settings {
 	public static final int CUSTOM_CACHE_REVISION = 1;
 	//welcome screen
 	public static final String WeekTitle = "Latest Update";
-	public static final String WeekMessage = "Dialogues & Bank improvements.";
+	public static final String WeekMessage = "Dialogues & Marcin precto.";
 	//world settings
 	public static final int START_PLAYER_HITPOINTS = 10;
 	public static final WorldTile START_PLAYER_LOCATION = new WorldTile(3164, 3484, 0);
