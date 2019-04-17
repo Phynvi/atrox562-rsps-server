@@ -20,7 +20,7 @@
 /data/562cache/*
 /data/characters/*
 /data/charactersBackup/*
-/data/npcs/packedSpawns/*
+/data/npcs/packedSpaws/*
 /data/npcs/npcswithoutbonus/*
 /data/censor/packedCensoredWords.e
 /data/logs\.txt
@@ -28,7 +28,7 @@
 /data/maps/packedSpawns/*
 /data/maps/*
 /data/bannedIPS.ser
-/data/cache-backups/*
+/data/cache-backnups/*
 /data/clans/*
 /data/GE/grandexchange/*
 /data/starters/*
@@ -67,23 +67,17 @@ data/iplogs/
 
 data/starters\.ini
 
-out/
-
-out/production/infernalrsps-server/com/rs/game/StarterMap\.txt
-
-out/production/infernalrsps-server/com/rs/game/npc/familiar/Z-FileSearcher\.jar
+/out/*
 
 data/logs/chat/
 
-data/logs/commands/admin/
+data/logs/admin/
 
-data/logs/commands/mod/
+data/logs/mod/
 
-data/logs/commands/players/
+data/logs/pm/
 
-data/logs/commands/sup/
-
-data/logs/itemsdropped/
+data/logs/trade/
 
 data/logs/pmlogs/
 
@@ -99,6 +93,7 @@ data/logs/logger\.txt
 information/
 
 dropseditor/unins000\.exe
+
 /bin/
 
 data/562cachemain_file_cache\.dat2
