@@ -6,7 +6,6 @@ import com.rs.game.player.Skills;
 import com.rs.game.Animation;
 import com.rs.game.player.actions.Action;
 import com.rs.game.player.skills.woodcutting.Woodcutting;
-import com.rs.game.cities.achievements.CityAchievements;
 import com.rs.game.tasks.WorldTask;
 import com.rs.game.tasks.WorldTasksManager;
 
@@ -162,11 +161,6 @@ public class Canoes {
                     }
                 }, 2);
                 CarrierTravel.sendCarrier(player, CarrierTravel.Carrier.values()[24 + selectedArea], false);
-				if (selectedArea == 3 && selectedCanoe == 3 && canoeArea == 0) {
-                    if (!player.getAchievementDiaryManager().getDiary(CityAchievements.LUMBRIDGE).isComplete(2, 2)) {
-                        player.getAchievementDiaryManager().getDiary(CityAchievements.LUMBRIDGE).updateTask(player, 2, 2, true);
-                    }
-                }
             }
         } else
             player.getPackets().

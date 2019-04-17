@@ -7,8 +7,6 @@ import com.rs.game.Hit;
 import com.rs.game.Hit.HitLook;
 import com.rs.game.item.Item;
 import com.rs.cache.loaders.NPCDefinitions;
-import com.rs.game.cities.achievements.AchievementDiary;
-import com.rs.game.cities.achievements.CityAchievements;
 import com.rs.game.npc.NPC;
 import com.rs.game.player.Equipment;
 import com.rs.game.player.Player;
@@ -120,21 +118,21 @@ public class PickPocketAction extends Action {
 						player.getInventory().addItem(item.getId(), item.getAmount());
 				}
 			}
-			if (player.inArea(3192, 3195, 3260, 3253)) {
+			/*if (player.inArea(3192, 3195, 3260, 3253)) {
 				if (npcData.equals(PickPocketableNPC.MAN)) {
 					AchievementDiary diary = player.getAchievementDiaryManager().getDiary(CityAchievements.LUMBRIDGE);
 					if (!diary.isComplete(0, 3)) {
 						diary.updateTask(player, 0, 3, true);
 					}
 				}
-			}
-			if (player.inArea(3066, 3237, 3089, 3271)) {
+			}*/
+			/*if (player.inArea(3066, 3237, 3089, 3271)) {
 				if (npcData.equals(PickPocketableNPC.MASTER_FARMER)) {
 					if (!player.getAchievementDiaryManager().getDiary(CityAchievements.LUMBRIDGE).isComplete(1, 6)) {
 						player.getAchievementDiaryManager().getDiary(CityAchievements.LUMBRIDGE).updateTask(player, 1, 6, true);
 					}
 				}
-			}
+			}*/
 		}
 		return -1;
 	}

@@ -12,9 +12,6 @@ import com.rs.game.WorldObject;
 import com.rs.game.WorldTile;
 import com.rs.Settings;
 import com.rs.game.player.dialogues.LevelUp;
-import com.rs.game.cities.achievements.AchievementDiary;
-import com.rs.game.cities.achievements.AchievementDiaryManager;
-import com.rs.game.cities.achievements.CityAchievements;
 import com.rs.game.item.Item;
 import com.rs.game.minigames.PuroPuro;
 import com.rs.game.minigames.clanwars.FfaZone;
@@ -1220,20 +1217,7 @@ public class ButtonHandler {
 				} else if (packetId == WorldPacketsDecoder.ACTION_BUTTON2_PACKET)
 					player.getInventory().sendExamine(slotId);
 			}
-			} else if (interfaceId == 259) {
-			if (AchievementDiaryManager.getGroup(componentId) == null)
-				return;
-			CityAchievements achievs = (CityAchievements) AchievementDiaryManager.getGroup(componentId)[0];
-			int type = (int) AchievementDiaryManager.getGroup(componentId)[1];
-			AchievementDiary diary = player.getAchievementDiaryManager().getDiary(achievs);
-			if (diary != null) {
-				if (type == -1)
-					diary.open(player);
-				else
-					diary.openSubgroup(player, type);
-				return;
-			}
-			} else if (interfaceId == 667) {
+			}  else if (interfaceId == 667) {
 			if (componentId == 9) {
 				if (packetId == 14) {
 					sendRemove(player, slotId);

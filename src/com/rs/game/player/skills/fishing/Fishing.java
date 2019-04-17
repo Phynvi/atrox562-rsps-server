@@ -11,8 +11,6 @@ import com.rs.game.npc.NPC;
 import com.rs.game.player.Player;
 import com.rs.game.World;
 import com.rs.game.player.Skills;
-import com.rs.game.cities.achievements.AchievementDiary;
-import com.rs.game.cities.achievements.CityAchievements;
 import com.rs.game.player.content.FishingSpotsHandler;
 import com.rs.utils.Utils;
 import com.rs.game.tasks.WorldTask;
@@ -287,23 +285,23 @@ public class Fishing extends Action {
 
         fishId = getRandomFish(player);
 
-        if (player.inArea(3255, 3125, 3308, 3158)) {
+        /*if (player.inArea(3255, 3125, 3308, 3158)) {
             if (spot.getFish()[option][fishId] == Fish.ANCHOVIES) {
                 AchievementDiary diary = player.getAchievementDiaryManager().getDiary(CityAchievements.LUMBRIDGE);
                 if (!diary.isComplete(0, 6)) {
                     diary.updateTask(player, 0, 6, true);
                 }
             }
-        }
+        }*/
 
-        if (player.inArea(3231, 3229, 3250, 3265)) {
+        /*if (player.inArea(3231, 3229, 3250, 3265)) {
             if (spot.getFish()[option][fishId] == Fish.SALMON) {
                 AchievementDiary diary = player.getAchievementDiaryManager().getDiary(CityAchievements.LUMBRIDGE);
                 if (!diary.isComplete(1, 3)) {
                     diary.updateTask(player, 1, 3, true);
                 }
             }
-        }
+        }*/
     }
 
     private String getMessage(Item fish) {

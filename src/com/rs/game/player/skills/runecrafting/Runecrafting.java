@@ -8,8 +8,6 @@ import com.rs.game.player.Skills;
 import com.rs.game.Animation;
 import com.rs.utils.Utils;
 import com.rs.cache.loaders.ItemDefinitions;
-import com.rs.game.cities.achievements.CityAchievements;
-import com.rs.game.cities.achievements.AchievementDiary;
 
 import java.util.HashMap;
 
@@ -158,13 +156,13 @@ public class Runecrafting {
 			player.sendMessage("You need some " + (!rune.isPureEssenceOnly() ? "rune or " : "") + "pure essence to runecraft " + rune.toString().toLowerCase().replace("_", " ") + "s.");
 			return;
 		}
-		if (player.inArea(2581, 4834, 2589, 4842)) {
+		/*if (player.inArea(2581, 4834, 2589, 4842)) {
 			if (rune == Runes.FIRE_RUNE) {
 				if (!player.getAchievementDiaryManager().getDiary(CityAchievements.LUMBRIDGE).isComplete(1, 9)) {
 					player.getAchievementDiaryManager().getDiary(CityAchievements.LUMBRIDGE).updateTask(player, 1, 9, true);
 				}
 			}
-		}
+		}*/
 		int runes = rune.isPureEssenceOnly() ? player.getInventory().getNumberOf(7936) : (player.getInventory().getNumberOf(7936) + player.getInventory().getNumberOf(1436));
 		if (!rune.isPureEssenceOnly())
 			player.getInventory().deleteItem(new Item(1436, runes));
@@ -175,18 +173,18 @@ public class Runecrafting {
 		player.getSkills().addXp(Skills.RUNECRAFTING, rune.getExperience() * runes);
 		player.getInventory().addItem(new Item(rune.getRuneId(), runes * multiplier));
 		player.sendMessage("You bind the Temple's power into " + rune.toString().replace("_", " ").toLowerCase() + ".");
-		if (rune == Runes.WATER_RUNE) {
+		/*if (rune == Runes.WATER_RUNE) {
 			AchievementDiary diary = player.getAchievementDiaryManager().getDiary(CityAchievements.LUMBRIDGE);
 			if (!diary.isComplete(0, 2)) {
 				diary.updateTask(player, 0, 2, true);
 			}
-		}
-		if (rune == Runes.COSMIC_RUNE && (runes * multiplier) == 56) {
+		}*/
+		/*if (rune == Runes.COSMIC_RUNE && (runes * multiplier) == 56) {
 			AchievementDiary diary = player.getAchievementDiaryManager().getDiary(CityAchievements.LUMBRIDGE);
 			if (!diary.isComplete(2, 1)) {
 				diary.updateTask(player, 2, 1, true);
 			}
-		}
+		}*/
 	}
 
 	public static boolean craftCombinationRunes(Player player, Item item, WorldObject object) {

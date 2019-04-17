@@ -27,8 +27,6 @@ import com.rs.game.player.controlers.Controler;
 import com.rs.Launcher;
 import com.rs.Settings;
 import com.rs.cores.CoresManager;
-import com.rs.game.cities.achievements.AchievementDiary;
-import com.rs.game.cities.achievements.AchievementDiaryManager;
 import com.rs.game.player.content.Notes;
 import com.rs.game.player.content.Notes.Note;
 import com.rs.game.Animation;
@@ -443,8 +441,6 @@ public final class Player extends Entity {
 	private int skullId;
 	private boolean forceNextMapLoadRefresh;
 	private PyramidPlunderControler pyramidPlunder = new PyramidPlunderControler();
-	private AchievementDiaryManager achievementDiaryManager;
-	private AchievementDiary achievementDiary;
 	
     private GrandExchangeManager geManager;
     private BountyHunter bountyHunter;
@@ -479,8 +475,6 @@ public final class Player extends Entity {
 		inventory = new Inventory();
 		dwarfCannon = new DwarfCannon(this);
 		geManager = new GrandExchangeManager();
-		achievementDiaryManager = new AchievementDiaryManager();
-		achievementDiary = new AchievementDiary();
 		pyramidPlunder = new PyramidPlunderControler();
 		slayerManager = new SlayerManager();
 		emotesManager = new EmotesManager();
@@ -520,10 +514,6 @@ public final class Player extends Entity {
 		}
 		if (pyramidPlunder == null)
 			pyramidPlunder = new PyramidPlunderControler();
-		if (achievementDiaryManager == null)
-			achievementDiaryManager = new AchievementDiaryManager();
-		if (achievementDiary == null)
-			achievementDiary = new AchievementDiary();
 		if (geManager == null)
 		    geManager = new GrandExchangeManager();
 		if (VBM == null)
@@ -560,8 +550,6 @@ public final class Player extends Entity {
 		getBountyHunter().setPlayer(this);
 		getPlunder().setPlayer(this);
 		house.setPlayer(this);
-		achievementDiaryManager.setPlayer(this);
-		achievementDiary.setPlayer(this);
 		getSlayerManager().setPlayer(this);
 		resetBarrows();
 		trade = new Trade(this);
@@ -1072,9 +1060,6 @@ public final class Player extends Entity {
 		Runecrafting.handleRuinsConfigs(this);
 		controlerManager.login(); //checks what to do on login after welcome screen
 		appearence.generateAppearenceData();
-		for (AchievementDiary a : getAchievementDiaryManager().getDiarys()) {
-			a.drawStatus(this);
-		}
 	}
 	
 	public void sendDefaultPlayersOptions() {
@@ -1180,7 +1165,7 @@ public final class Player extends Entity {
 			house.finish();
 		if (spellbookSwap)
 			getCombatDefinitions().setSpellBook(2);
-		new Thread(new Highscores(this)).start();
+		//new Thread(new Highscores(this)).start();
 		cutscenesManager.logout();
 		controlerManager.logout(); // checks what to do on before logout for
 		LastLoggedDate();
@@ -1328,16 +1313,8 @@ public final class Player extends Entity {
 		return localNPCUpdate;
 	}
 	
-	public AchievementDiaryManager getAchievementDiaryManager() {
-		return achievementDiaryManager;
-	}
-	
 	public boolean hasItem(int item) {
 		return (getInventory().containsItem(item, 1) || (bank.getItem(item) != null || equipment.hasItem(item)));
-	}
-
-	public AchievementDiary getAchievementDiary() {
-		return achievementDiary;
 	}
 	
 	public int getDisplayMode() {

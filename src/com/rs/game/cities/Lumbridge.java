@@ -3,8 +3,6 @@ package com.rs.game.cities;
 import com.rs.game.WorldTile;
 import com.rs.game.WorldObject;
 import com.rs.game.player.Player;
-import com.rs.game.cities.achievements.AchievementDiary;
-import com.rs.game.cities.achievements.CityAchievements;
 import com.rs.game.Animation;
 import com.rs.game.Hit;
 import com.rs.game.player.Skills;
@@ -112,10 +110,6 @@ public class Lumbridge {
                         player.addWalkSteps(3041, player.getY() >= object.getY() ? object.getY() - 1 : object.getY(), -1, false);
                         player.sendMessage("You successfully pick-locked the door.");
                         player.useStairs(827, new WorldTile(3149, 9652, 0), 1, 2);
-                        AchievementDiary diary = player.getAchievementDiaryManager().getDiary(CityAchievements.LUMBRIDGE);
-                        if (!diary.isComplete(0, 9)) {
-                            diary.updateTask(player, 0, 9, true);
-                        }
                     } else if (success >= 2 && success <= 5) {
                         player.setNextAnimation(new Animation(2244));
                         player.lock(5);

@@ -4,7 +4,6 @@ import com.rs.game.player.Player;
 import com.rs.game.WorldTile;
 import com.rs.game.tasks.WorldTask;
 import com.rs.game.tasks.WorldTasksManager;
-import com.rs.game.cities.achievements.CityAchievements;
 
 import static com.rs.game.player.content.FairyRings.Rings.DIS;
 
@@ -208,11 +207,11 @@ public class FairyRings {
             sendTeleport(player, new WorldTile(FAIRY_SOURCE, 2));
             return false;
         }
-        if (ring == DIS) {
+        /*if (ring == DIS) {
             if (!player.getAchievementDiaryManager().getDiary(CityAchievements.LUMBRIDGE).isComplete(1, 1)) {
                 player.getAchievementDiaryManager().updateTask(player, CityAchievements.LUMBRIDGE, 1, 1, true);
             }
-        }
+        }*/
         sendTeleport(player, ring.getTile());
         return true;
     }

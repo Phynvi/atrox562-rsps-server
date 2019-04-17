@@ -35,8 +35,6 @@ import com.rs.utils.Misc;
 import com.rs.game.player.controlers.Wilderness;
 import com.rs.game.tasks.WorldTask;
 import com.rs.game.tasks.WorldTasksManager;
-import com.rs.game.cities.achievements.AchievementDiary;
-import com.rs.game.cities.achievements.CityAchievements;
 import com.rs.utils.Logger;
 import com.rs.utils.MapAreas;
 import com.rs.utils.NPCBonuses;
@@ -723,10 +721,10 @@ public class NPC extends Entity implements Serializable {
 			if (killer.getSlayerManager().getCurrentTask() == SlayerTask.VAMPYRE && this.getId() == 6214) {
 			    Slayer.killedTask(killer, this);
 			}
-			if (killer.inArea(3066, 9644, 3158, 9714)) {
+			/*if (killer.inArea(3066, 9644, 3158, 9714)) {
 				if (this.getId() == 75 || this.getId() == 74 || getId() == 76 || getId() == 5305) {
 					AchievementDiary diary = killer.getAchievementDiaryManager().getDiary(CityAchievements.LUMBRIDGE);
-					if (!diary.isComplete(0, 5)/* && CAVE_BORDER.insideBorder(p)*/) {
+					if (!diary.isComplete(0, 5)*//* && CAVE_BORDER.insideBorder(p)*//*) {
 						diary.updateTask(killer, 0, 5, true);
 					}
 				}
@@ -736,7 +734,7 @@ public class NPC extends Entity implements Serializable {
 				if (!diary.isComplete(0, 0)) {
 					diary.updateTask(killer, 0, 0, true);
 				}
-			}
+			}*/
 			
 
 			Drop[] possibleDrops = new Drop[drops.length];

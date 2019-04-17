@@ -4,7 +4,6 @@ import java.util.HashMap;
 import java.util.Map;
 
 import com.rs.game.player.actions.Action;
-import com.rs.game.cities.achievements.CityAchievements;
 import com.rs.game.player.Player;
 import com.rs.game.player.Skills;
 import com.rs.utils.Utils;
@@ -178,13 +177,13 @@ public class Smithing extends Action {
 		player.getInventory().addItem(bar.getItems()[index].getId(),
 				ForgingInterface.getForgedAmount(bar.getItems()[index].getId()));
 		player.getSkills().addXp(Skills.SMITHING, getExperience(player));
-		if (player.inArea(3066, 9644, 3158, 9714)) {
+		/*if (player.inArea(3066, 9644, 3158, 9714)) {
 			if (bar.getItems()[index].getId() == 1121) {
 				if (!player.getAchievementDiaryManager().getDiary(CityAchievements.LUMBRIDGE).isComplete(2, 0)) {
 					player.getAchievementDiaryManager().getDiary(CityAchievements.LUMBRIDGE).updateTask(player, 2, 0, true);
 				}
 			}
-		}
+		}*/
 		if (ticks > 0) {
 			return 3;
 		}
