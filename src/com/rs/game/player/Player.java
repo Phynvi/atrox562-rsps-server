@@ -17,13 +17,14 @@ import java.util.concurrent.TimeUnit;
 import java.net.*;
 import java.io.*;
 
+import com.rs.game.area.PKWorld;
 import com.rs.game.player.content.grandexchange.GrandExchangeManager;
 import com.rs.game.player.VarBitManager;
+import com.rs.game.player.controlers.*;
 import com.rs.game.player.skills.farming.FarmingManager;
 import com.rs.game.player.Highscores;
 import com.rs.game.minigames.WarriorsGuild;
 import com.rs.game.player.skills.thieving.PyramidPlunderControler;
-import com.rs.game.player.controlers.Controler;
 import com.rs.Launcher;
 import com.rs.Settings;
 import com.rs.cores.CoresManager;
@@ -64,11 +65,6 @@ import com.rs.game.player.content.pet.PetManager;
 import com.rs.game.npc.pet.Pet;
 import com.rs.game.npc.others.GraveStone;
 import com.rs.game.player.actions.PlayerCombat;
-import com.rs.game.player.controlers.CorpBeastControler;
-import com.rs.game.player.controlers.CrucibleControler;
-import com.rs.game.player.controlers.FightCaves;
-import com.rs.game.player.controlers.GodWars;
-import com.rs.game.player.controlers.Wilderness;
 import com.rs.game.player.controlers.castlewars.CastleWarsPlaying;
 import com.rs.game.player.controlers.castlewars.CastleWarsWaiting;
 import com.rs.game.player.controlers.fightpits.FightPitsArena;
@@ -103,6 +99,16 @@ public final class Player extends Entity {
 	public boolean didPassBlue;
 	
 	private double[] warriorPoints;
+
+	public boolean isAtSafeSpot() {
+		return isAtSafeSpot;
+	}
+
+	public void setAtSafeSpot(boolean atSafeSpot) {
+		isAtSafeSpot = atSafeSpot;
+	}
+
+	private boolean isAtSafeSpot;
 	
 	// Lending
 	public boolean isLendingItem = false;
@@ -868,10 +874,10 @@ public final class Player extends Entity {
 			if(!hasSkull())
 				appearence.generateAppearenceData();
 		}
-		if (!(getControlerManager().getControler() instanceof Wilderness)
-				&& isAtWild() && !Wilderness.isAtWildSafe(this)) {
-			getControlerManager().startControler("WildernessControler");
-		}
+		/*if (!(getControlerManager().getControler() instanceof Pking)
+				&& (!isAtWild() || !PKWorld.isAtSafeZone(this)) && !Wilderness.isAtWildSafe(this)) {
+			getControlerManager().startControler("Pking");
+		}*/
 		if (getFrozenBy() != null && this != null) {
 			if (!Utils.inCircle(getFrozenBy(), this, 10)
 					&& getFreezeDelay() > Utils.currentTimeMillis()) {

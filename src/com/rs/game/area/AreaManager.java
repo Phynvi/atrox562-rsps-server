@@ -31,6 +31,8 @@ public class AreaManager {
 			areas().add(new FFASafe());
 			areas().add(new FFASafePvP());
 			areas().add(new FFASafeZone());
+			//mike
+			areas().add(new GESafeZone());
 		} catch (Exception e) {
 			System.out.print(e);
 		}

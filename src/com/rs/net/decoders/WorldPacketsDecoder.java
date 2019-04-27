@@ -92,7 +92,7 @@ import com.rs.game.player.skills.summoning.Summoning;
 import com.rs.game.player.actions.WhirlPool;
 import com.rs.game.player.content.agility.BarbarianOutpostAgility;
 import com.rs.game.player.content.agility.GnomeAgility;
-import com.rs.game.player.content.agility.WildernessAgility;
+import com.rs.game.player.content.agility.Agility;
 import com.rs.game.player.content.grandexchange.GrandExchange;
 import com.rs.game.player.content.objects.Clipedobject;
 import com.rs.game.player.actions.PlayerCombat;

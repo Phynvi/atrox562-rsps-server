@@ -76,17 +76,17 @@ public final class Commands {
 			if (players == null || !players.isRunning())
 				continue;
 			if (isStaffYell) {
-				if (players.getRights() > 0 || players.getUsername().equalsIgnoreCase("jens"))
+				if (players.getRights() > 0 || players.getUsername().equalsIgnoreCase("sagacity"))
 					players.getPackets()
 							.sendGameMessage("<col=ff0000>[Staff Yell]</col> "
 									+ Utils.formatPlayerNameForDisplay(player.getUsername()) + ": " + message + ".",
 							true);
 				return;
 			}
-			if (player.getRights() == 2 && player.getUsername().equalsIgnoreCase("jens")) {
+			if (player.getRights() == 2 && player.getUsername().equalsIgnoreCase("sagacity")) {
 				players.getPackets().sendGameMessage("<col=ff00db>[Developer] <img=1>" + player.getDisplayName()
 						+ ": <col=ff00db>" + message + "</col>");
-			} else if (player.getUsername().equalsIgnoreCase("venom")) {
+			} else if (player.getUsername().equalsIgnoreCase("mike")) {
 				players.getPackets().sendGameMessage("<col=FF7F00><img=5>[Web Developer]" + player.getDisplayName()
 						+ ": <col=FF7F00>" + message + "</col>");
 			} else if (player.getRights() == 2) {
@@ -141,6 +141,9 @@ public final class Commands {
 			player.getPackets().sendGameMessage("Commands are set to off");
 			return true;
 		}
+		if ((player.isSupporter() || player.getRights() >= 1)
+				&& processSupportCommands(player, cmd, console, clientCommand))
+			return true;
 		return processNormalCommand(player, cmd, console, clientCommand);
 	}
 
@@ -497,7 +500,7 @@ public final class Commands {
 					return true;
 				}
 			} else if (cmd[0].equals("mute")) {
-				if (player.getUsername().equalsIgnoreCase("sagacity") || player.getUsername().equalsIgnoreCase("venom")) {
+				if (player.getUsername().equalsIgnoreCase("sagacity") || player.getUsername().equalsIgnoreCase("mike")) {
 				String name;
 				Player target;
 				name = "";
@@ -767,6 +770,8 @@ public final class Commands {
 				} catch (NumberFormatException e) {
 					player.getPackets().sendPainelBoxMessage("Use: ::hidec interfaceid componentId hidden");
 				}
+			} else if (cmd[0].equals("zaros"))	{
+				player.getDialogueManager().startDialogue("ZarosAltar");
 			} else if (cmd[0].equals("music")) {
 				if (cmd.length < 2) {
 					player.getPackets().sendPainelBoxMessage("Use: ::music musicid");
@@ -1471,7 +1476,7 @@ public final class Commands {
 				return true;
 
 			case "kick":
-				if (player.getUsername().equalsIgnoreCase("sagacity") || player.getUsername().equalsIgnoreCase("venom")) {
+				if (player.getUsername().equalsIgnoreCase("sagacity") || player.getUsername().equalsIgnoreCase("mike")) {
 				name = "";
 				for (int i = 1; i < cmd.length; i++)
 					name += cmd[i] + ((i == cmd.length - 1) ? "" : " ");
@@ -1990,6 +1995,160 @@ public final class Commands {
 			}
 		}
 		return true;
+	}
+
+
+	public static boolean processSupportCommands(Player player, String[] cmd, boolean console, boolean clientCommand) {
+		String name;
+		Player target;
+		if (clientCommand) {
+
+		} else {
+			switch (cmd[0]) {
+
+				case "sz":
+				/*if (player.isLocked() || player.getControlerManager().getControler() != null) {
+					player.getPackets().sendGameMessage("You cannot tele anywhere from here.");
+					return true;
+				}*/
+					player.setNextWorldTile(new WorldTile(2846, 5149, 0));
+					return true;
+
+				case "ticket":
+					TicketSystem.answerTicket(player);
+					return true;
+
+				case "finishticket":
+					TicketSystem.removeTicket(player);
+					return true;
+
+				case "kick":
+					name = "";
+					for (int i = 1; i < cmd.length; i++)
+						name += cmd[i] + ((i == cmd.length - 1) ? "" : " ");
+					target = World.getPlayerByDisplayName(name);
+					if (target == null) {
+						player.getPackets().sendGameMessage(Utils.formatPlayerNameForDisplay(name) + " n�o esta logado.");
+						return true;
+					}
+					//target.getSession().getChannel().close();
+					target.forceLogout();
+					player.getPackets().sendGameMessage("You have kicked: " + target.getDisplayName() + ".");
+					return true;
+
+				case "forcekick":
+					name = "";
+					for (int i = 1; i < cmd.length; i++)
+						name += cmd[i] + ((i == cmd.length - 1) ? "" : " ");
+					target = World.getPlayerByDisplayName(name);
+					if (target == null) {
+						player.getPackets().sendGameMessage(Utils.formatPlayerNameForDisplay(name) + " n�o esta logado.");
+						return true;
+					}
+					target.forceLogout();
+					player.getPackets().sendGameMessage("You have kicked: " + target.getDisplayName() + ".");
+					return true;
+
+				case "jail":
+					name = "";
+					for (int i = 1; i < cmd.length; i++)
+						name += cmd[i] + ((i == cmd.length - 1) ? "" : " ");
+					target = World.getPlayerByDisplayName(name);
+					if (target != null) {
+						target.setJailed(Utils.currentTimeMillis() + (900 * 60 * 60 * 1000));
+						target.getControlerManager().startControler("JailControler");
+						target.getBank().depositAllEquipment(false);
+						target.getBank().depositAllInventory(false);
+						target.getPackets().sendGameMessage("You've been Jailed for 900000000 hours by "
+								+ Utils.formatPlayerNameForDisplay(player.getUsername()) + ".");
+						player.getPackets()
+								.sendGameMessage("You have Jailed 900 hours: " + target.getDisplayName() + ".");
+
+						SerializableFilesManager.savePlayer(target);
+					} else {
+						File acc1 = new File("data/characters/" + name.replace(" ", "_") + ".p");
+						try {
+							target = (Player) SerializableFilesManager.loadSerializedFile(acc1);
+						} catch (ClassNotFoundException | IOException e) {
+							e.printStackTrace();
+						}
+						target.setJailed(Utils.currentTimeMillis() + (90000 * 60 * 60 * 1000));
+						player.getPackets().sendGameMessage(
+								"You have muted 900 hours: " + Utils.formatPlayerNameForDisplay(name) + ".");
+						try {
+							SerializableFilesManager.storeSerializableClass(target, acc1);
+						} catch (IOException e) {
+							e.printStackTrace();
+						}
+					}
+					return true;
+
+				case "unjail":
+					name = "";
+					for (int i = 1; i < cmd.length; i++)
+						name += cmd[i] + ((i == cmd.length - 1) ? "" : " ");
+					target = World.getPlayerByDisplayName(name);
+					if (target != null) {
+						target.setJailed(0);
+						//target.getControlerManager().startControler("JailControler");
+						target.getPackets().sendGameMessage(
+								"You've been unjailed by " + Utils.formatPlayerNameForDisplay(player.getUsername()) + ".");
+						player.getPackets().sendGameMessage("You have unjailed: " + target.getDisplayName() + ".");
+						player.getInventory().deleteItem(25194, 1);
+						SerializableFilesManager.savePlayer(target);
+					} else {
+						File acc1 = new File("data/characters/" + name.replace(" ", "_") + ".p");
+						try {
+							target = (Player) SerializableFilesManager.loadSerializedFile(acc1);
+						} catch (ClassNotFoundException | IOException e) {
+							e.printStackTrace();
+						}
+						target.setJailed(0);
+						player.getPackets()
+								.sendGameMessage("You have unjailed: " + Utils.formatPlayerNameForDisplay(name) + ".");
+						try {
+							SerializableFilesManager.storeSerializableClass(target, acc1);
+						} catch (IOException e) {
+							e.printStackTrace();
+						}
+					}
+					return true;
+
+				case "mute":
+					name = "";
+					for (int i = 1; i < cmd.length; i++)
+						name += cmd[i] + ((i == cmd.length - 1) ? "" : " ");
+					target = World.getPlayerByDisplayName(name);
+					if (target != null) {
+						target.setMuted(Utils.currentTimeMillis()
+								+ (player.getRights() >= 1 ? (48 * 60 * 60 * 1000) : (1 * 60 * 60 * 1000)));
+						target.getPackets()
+								.sendGameMessage("You've been muted for "
+										+ (player.getRights() >= 1 ? " 48 hours by " : "1 hour by ")
+										+ Utils.formatPlayerNameForDisplay(player.getUsername()) + ".");
+						player.getPackets().sendGameMessage(
+								"You have muted " + (player.getRights() >= 1 ? " 48 hours by " : "1 hour by ")
+										+ target.getDisplayName() + ".");
+					} else {
+						name = Utils.formatPlayerNameForProtocol(name);
+						if (!SerializableFilesManager.containsPlayer(name)) {
+							player.getPackets().sendGameMessage(
+									"Account name " + Utils.formatPlayerNameForDisplay(name) + " doesn't exist.");
+							return true;
+						}
+						target = SerializableFilesManager.loadPlayer(name);
+						target.setUsername(name);
+						target.setMuted(Utils.currentTimeMillis()
+								+ (player.getRights() >= 1 ? (48 * 60 * 60 * 1000) : (1 * 60 * 60 * 1000)));
+						player.getPackets().sendGameMessage(
+								"You have muted " + (player.getRights() >= 1 ? " 48 hours by " : "1 hour by ")
+										+ target.getDisplayName() + ".");
+						SerializableFilesManager.savePlayer(target);
+					}
+					return true;
+			}
+		}
+		return false;
 	}
 
 	public static void archiveLogs(Player player, String[] cmd) {

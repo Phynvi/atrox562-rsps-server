@@ -79,6 +79,8 @@ public class ControlerHandler {
 			handledControlers.put("StealingCreationsGame", (Class<Controler>) Class.forName(StealingCreationGame.class.getCanonicalName()));
 			handledControlers.put("StealingCreationsLobby", (Class<Controler>) Class.forName(StealingCreationLobby.class.getCanonicalName()));
 			handledControlers.put("RuneEssenceController", (Class<Controler>) Class.forName(RuneEssenceController.class.getCanonicalName()));
+
+			handledControlers.put("Pking", (Class<Controler>) Class.forName(Pking.class.getCanonicalName()));
 			
 		} catch (ClassNotFoundException e) {
 			e.printStackTrace();

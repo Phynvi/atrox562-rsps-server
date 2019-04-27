@@ -14,13 +14,12 @@ import com.rs.Launcher;
 import com.rs.Settings;
 import com.rs.cores.CoresManager;
 import com.rs.game.area.AreaManager;
+import com.rs.game.area.PKWorld;
 import com.rs.game.item.FloorItem;
 import com.rs.game.item.Item;
 import com.rs.game.minigames.GodWarsBosses;
-import com.rs.game.minigames.PuroPuro;
 import com.rs.game.minigames.clanwars.FfaZone;
 import com.rs.game.minigames.duel.DuelControler;
-import com.rs.game.player.controlers.Barrows;
 import com.rs.game.npc.NPC;
 import com.rs.game.npc.NPCForceTalks;
 import com.rs.game.player.skills.thieving.PyramidPlunderControler;
@@ -46,11 +45,8 @@ import com.rs.game.npc.nomad.FlameVortex;
 import com.rs.game.npc.nomad.Nomad;
 import com.rs.game.npc.others.Bork;
 import com.rs.game.npc.others.LivingRock;
-import com.rs.game.npc.others.Lucien;
-import com.rs.game.npc.others.MasterOfFear;
 import com.rs.game.npc.others.MercenaryMage;
 import com.rs.game.npc.others.PestMonsters;
-import com.rs.game.npc.others.Pker;
 import com.rs.game.npc.others.Dummy;
 import com.rs.game.npc.others.Revenant;
 import com.rs.game.npc.others.Cyclopse;
@@ -462,8 +458,10 @@ public final class World {
 				if (musicId != -1)
 					player.getMusicsManager().checkMusic(musicId);
 				player.getControlerManager().moved();
-				if (player.hasStarted())
+				if (player.hasStarted()) {
 					checkControlersAtMove(player);
+					PKWorld.checkPlayerTiles(player);
+				}
 			} else {
 				if (entity.getLastRegionId() > 0)
 					getRegion(entity.getLastRegionId()).removeNPCIndex(entity.getIndex());
@@ -475,8 +473,10 @@ public final class World {
 			if (entity instanceof Player) {
 				Player player = (Player) entity;
 				player.getControlerManager().moved();
-				if(player.hasStarted())
+				if(player.hasStarted()) {
 					checkControlersAtMove(player);
+					PKWorld.checkPlayerTiles(player);
+				}
 			}
 			entity.checkMultiArea();
 		}
