@@ -15,6 +15,7 @@ public class PKWorld {
             showInterface(player, true);
             player.getControlerManager().startControler("Pking");
             player.sendMessage("Danger zone");
+            player.sendMessage("ljkj");
             return false;
         }
     }
